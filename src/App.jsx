@@ -64,6 +64,7 @@ function App() {
             <div className="flex items-center space-x-6">
               <a href="#about" onClick={(e) => smoothScrollTo(e, '#about')} className={`transition-colors hover:scale-110 transform ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>About</a>
               <a href="#skills" onClick={(e) => smoothScrollTo(e, '#skills')} className={`transition-colors hover:scale-110 transform ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>Skills</a>
+              <a href="#portfolio" onClick={(e) => smoothScrollTo(e, '#portfolio')} className={`transition-colors hover:scale-110 transform ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>Portfolio</a>
               <a href="#services" onClick={(e) => smoothScrollTo(e, '#services')} className={`transition-colors hover:scale-110 transform ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>Services</a>
               <a href="#contact" onClick={(e) => smoothScrollTo(e, '#contact')} className={`transition-colors hover:scale-110 transform ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>Contact</a>
               <button 
@@ -230,6 +231,225 @@ function App() {
               <Code2 className="h-12 w-12 text-blue-600 mb-4" />
               <h3 className={`text-xl font-semibold mb-2 transition-colors ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Web Development</h3>
               <p className={isDarkMode ? 'text-gray-300' : 'text-gray-600'}>Full-Stack Web Apps, E-commerce, Custom Solutions</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className={`py-20 px-4 sm:px-6 lg:px-8 transition-colors ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className={`text-3xl sm:text-4xl font-bold mb-4 transition-colors ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+              My Portfolio
+            </h2>
+            <p className={`text-lg max-w-2xl mx-auto transition-colors ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              Featured projects showcasing my expertise and technical skills
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Project 1: Stripe and PayPal Integration */}
+            <div className={`rounded-xl shadow-lg overflow-hidden transition-all hover:scale-105 transform ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+              <div className="h-56 bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="text-center text-white relative z-10 px-4">
+                  <Database className="h-20 w-20 mx-auto mb-3" />
+                  <h3 className="text-2xl font-bold">Payment Integration</h3>
+                  <p className="text-sm opacity-90 mt-2">E-commerce Payment Solution</p>
+                </div>
+              </div>
+              <div className="p-6">
+                {/* Project Image */}
+                <div className="mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop" 
+                    alt="Stripe PayPal Integration Dashboard" 
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+                <h3 className={`text-xl font-bold mb-3 transition-colors ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                  Stripe & PayPal Integration
+                </h3>
+                <p className={`mb-4 transition-colors ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  Implemented secure payment gateway integration using Stripe and PayPal APIs for an e-commerce platform. Built a robust payment processing system with support for multiple payment methods, subscription billing, and real-time transaction monitoring.
+                </p>
+                
+                <div className={`mb-4 p-4 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}>
+                  <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Work Completed:</h4>
+                  <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Integrated Stripe API for credit card payments with 3D Secure authentication
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Implemented PayPal Express Checkout for seamless user experience
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Built subscription billing system with recurring payment management
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Created real-time transaction monitoring dashboard with analytics
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Implemented webhook handling for payment status updates
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Stripe API</span>
+                  <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">PayPal API</span>
+                  <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">.NET Core</span>
+                  <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">React</span>
+                  <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">SQL Server</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                    <span className="font-semibold">Key Features:</span>
+                    <span className="ml-2">Multi-payment support, Secure transactions, Real-time monitoring</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 2: .NET Core and Angular New Feature */}
+            <div className={`rounded-xl shadow-lg overflow-hidden transition-all hover:scale-105 transform ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+              <div className="h-56 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="text-center text-white relative z-10 px-4">
+                  <Code2 className="h-20 w-20 mx-auto mb-3" />
+                  <h3 className="text-2xl font-bold">Enterprise Application</h3>
+                  <p className="text-sm opacity-90 mt-2">Feature Enhancement Project</p>
+                </div>
+              </div>
+              <div className="p-6">
+                {/* Project Image */}
+                <div className="mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop" 
+                    alt=".NET Core Angular Enterprise Application" 
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+                <h3 className={`text-xl font-bold mb-3 transition-colors ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                  .NET Core & Angular New Features
+                </h3>
+                <p className={`mb-4 transition-colors ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  Developed and deployed new features for an existing enterprise application using .NET Core backend and Angular frontend. Enhanced system functionality with improved performance, user experience, and business logic implementation.
+                </p>
+                
+                <div className={`mb-4 p-4 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}>
+                  <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Work Completed:</h4>
+                  <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Developed advanced reporting module with data visualization charts
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Implemented role-based access control (RBAC) for enhanced security
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Created real-time notification system using SignalR
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Optimized database queries reducing load time by 40%
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Built responsive Angular components with improved UX/UI
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">.NET Core</span>
+                  <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Angular</span>
+                  <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">TypeScript</span>
+                  <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Entity Framework</span>
+                  <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">REST API</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                    <span className="font-semibold">Key Features:</span>
+                    <span className="ml-2">Feature enhancement, Performance optimization, UX improvements</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 3: Sticky Tasks - Laravel & React */}
+            <div className={`rounded-xl shadow-lg overflow-hidden transition-all hover:scale-105 transform ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+              <div className="h-56 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="text-center text-white relative z-10 px-4">
+                  <Layout className="h-20 w-20 mx-auto mb-3" />
+                  <h3 className="text-2xl font-bold">Task Management</h3>
+                  <p className="text-sm opacity-90 mt-2">Productivity Solution</p>
+                </div>
+              </div>
+              <div className="p-6">
+                {/* Project Image */}
+                <div className="mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=400&fit=crop" 
+                    alt="Sticky Tasks Task Management Dashboard" 
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+                <h3 className={`text-xl font-bold mb-3 transition-colors ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                  Sticky Tasks - Laravel & React
+                </h3>
+                <p className={`mb-4 transition-colors ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  Sticky Tasks is a comprehensive web portal designed to streamline task management, time tracking, and cardboard management processes with seamless integration of React on the front-end and Laravel on the back-end.
+                </p>
+                
+                <div className={`mb-4 p-4 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}>
+                  <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Work Completed:</h4>
+                  <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Built comprehensive task management system with drag-and-drop functionality
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Implemented time tracking features with automated reporting
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Created cardboard management for visual project organization
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Developed RESTful APIs using Laravel for backend operations
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 mr-2 mt-0.5 text-green-500" />
+                      Built responsive React frontend with real-time updates
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Laravel</span>
+                  <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">React</span>
+                  <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">PHP</span>
+                  <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">MySQL</span>
+                  <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">REST API</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                    <span className="font-semibold">Key Features:</span>
+                    <span className="ml-2">Task management, Time tracking, Cardboard organization</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
